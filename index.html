@@ -60,12 +60,12 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overscroll-behavi
 <section class="w-full rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 bg-white/5" id="mode-card">
 <h2 id="modes-label" class="text-sm sm:text-base font-semibold mb-2 sm:mb-3">Choose your mood</h2>
 <div class="flex flex-wrap gap-1.5 sm:gap-2" role="radiogroup">
-<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition" data-mode="Calm"> 🌊 Calm </button>
-<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Dreamy"> ✨ Dreamy </button>
-<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Cozy"> 🔥 Cozy </button>
-<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Good"> 😊 Good </button>
-<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Sad"> 😢 Sad </button>
-<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Angry"> 😤 Angry </button>
+<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition" data-mode="Calm"> Calm </button>
+<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Dreamy"> Dreamy </button>
+<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Cozy"> Cozy </button>
+<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Good"> Good </button>
+<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Sad"> Sad </button>
+<button type="button" class="mode-btn focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition" data-mode="Angry"> Angry </button>
 </div>
 </section>
 
@@ -84,7 +84,7 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overscroll-behavi
 </form>
 </div>
 <div id="groups-list" class="flex flex-wrap gap-1.5 sm:gap-2">
-<button type="button" id="all-posts-btn" class="focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30 bg-white/20 hover:bg-white/25 transition"> 📋 All Posts </button>
+<button type="button" id="all-posts-btn" class="focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30 bg-white/20 hover:bg-white/25 transition"> All Posts </button>
 </div>
 </section>
 
@@ -104,30 +104,13 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overscroll-behavi
 <ul id="feed-list" class="flex flex-col gap-2 text-xs sm:text-sm max-h-64 overflow-y-auto pr-1"></ul>
 </section>
 </div>
-
-<section class="rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 bg-white/5">
-<h2 class="text-sm sm:text-base font-semibold mb-3">🎨 Drawing Gallery</h2>
-<div id="gallery-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-<p class="text-xs opacity-50 col-span-full">Post your drawings in the game to see them here!</p>
-</div>
-</section>
 </div>
 
-<div id="group-view" class="hidden w-full flex flex-col gap-3 sm:gap-4 relative">
+<div id="group-view" class="hidden w-full flex flex-col gap-3 sm:gap-4">
 <div class="w-full rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 bg-white/5 flex items-center justify-between">
-<div class="flex items-center gap-2">
 <h2 id="group-view-title" class="text-base sm:text-lg font-semibold">Group Chat</h2>
-<button id="group-settings-btn" class="text-xs p-1.5 rounded-full hover:bg-white/10 border border-transparent hover:border-white/20">⚙️</button>
-</div>
 <button type="button" id="exit-group-btn" class="focus-outline text-xs sm:text-sm px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 hover:bg-white/10 transition"> ← Back to Main </button>
 </div>
-
-<div id="group-settings-menu" class="hidden absolute top-16 left-4 z-20 w-48 bg-[#1a1a1a] border border-white/20 rounded-xl shadow-xl p-2 flex flex-col gap-1">
-<p class="text-xs font-bold px-2 py-1 text-white/50 border-b border-white/10">Settings</p>
-<button id="delete-group-btn" class="text-left text-xs text-red-400 hover:bg-red-500/10 px-2 py-1.5 rounded">Delete Group</button>
-<button id="close-settings-btn" class="text-left text-xs hover:bg-white/10 px-2 py-1.5 rounded">Close</button>
-</div>
-
 <div class="w-full rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 bg-white/5 flex flex-col gap-3 sm:gap-4">
 <ul id="group-messages-list" class="flex flex-col gap-2 text-xs sm:text-sm max-h-96 overflow-y-auto pr-1 min-h-[150px]">
 <li class="text-center opacity-50 italic mt-4">Welcome to the group chat.</li>
@@ -139,17 +122,29 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overscroll-behavi
 </div>
 </div>
 
+<section class="w-full rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 bg-white/5 flex flex-col gap-2 sm:gap-3">
+<div class="flex items-center justify-between">
+<h2 class="text-sm sm:text-base font-semibold"> Talk to Someone</h2><button type="button" id="toggle-ai-chat" class="focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#38bdf8] hover:bg-[#0ea5e9] text-[#020617] font-semibold transition"> Chat </button>
+</div>
+<div id="ai-chat-area" class="hidden flex flex-col gap-2 sm:gap-3 border-t border-white/10 pt-2 sm:pt-3">
+<div class="flex flex-col gap-2 max-h-64 overflow-y-auto pr-1" id="ai-messages"></div>
+<form id="ai-chat-form" class="flex flex-col gap-1.5 sm:gap-2"><textarea id="ai-chat-input" rows="2" class="focus-outline w-full rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs sm:text-sm text-white bg-[#020617]/50 border border-white/20 placeholder-white/30 resize-none"></textarea>
+<button type="submit" class="focus-outline text-xs sm:text-sm px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-[#38bdf8] hover:bg-[#0ea5e9] text-[#020617] font-semibold self-end"> Send </button>
+</form>
+</div>
+</section>
+
 <section class="w-full rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 bg-white/5 flex flex-col gap-3 sm:gap-4">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
 <h2 class="text-sm sm:text-base font-semibold">Mini Games</h2>
 <div class="flex flex-wrap gap-1.5 sm:gap-2">
-<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/20 bg-white/10 hover:bg-white/20" data-game="breathing">🫁 Breathe</button>
-<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="stars">⭐ Stars</button>
-<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="ripple">💧 Ripple</button>
-<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="drawing">🎨 Drawing</button>
-<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="blockblast">🧱 Block Blast</button>
-<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="popcorn">🍿 Popcorn</button>
-<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="snake">🐍 Snake Battle</button>
+<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/20 bg-white/10 hover:bg-white/20" data-game="breathing"> Breathe</button>
+<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="stars"> Stars</button>
+<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="ripple"> Ripple</button>
+<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="drawing"> Drawing</button>
+<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="blockblast"> Block Blast</button>
+<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="popcorn"> Popcorn</button>
+<button type="button" class="game-btn focus-outline text-xs px-2.5 sm:px-3 py-1 rounded-full border border-white/10 hover:bg-white/15" data-game="snake"> Snake Battle</button>
 </div>
 </div>
 
@@ -170,17 +165,12 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overscroll-behavi
 
 <div id="drawing-game" class="hidden flex-col gap-3 sm:gap-4">
 <div class="flex flex-col gap-2">
-<div class="flex justify-between items-center"><span class="text-xs opacity-70">Tools:</span>
-<div class="flex gap-2">
-<button id="post-drawing-btn" class="text-xs px-3 py-1 rounded bg-green-500/20 text-green-400 border border-green-500/50 hover:bg-green-500/30">Post to Gallery</button>
-<button id="clear-canvas" class="text-xs border px-2 py-1 rounded border-white/20">Clear</button>
-</div>
-</div>
+<div class="flex justify-between items-center"><span class="text-xs opacity-70">Tools:</span> <button id="clear-canvas" class="text-xs border px-2 py-1 rounded border-white/20">Clear</button></div>
 <div class="flex flex-wrap gap-2">
-<button class="tool-btn text-xs px-2 py-1 rounded bg-[#38bdf8]/20 border border-[#38bdf8]" data-tool="pen">🖊️ Pen</button>
-<button class="tool-btn text-xs px-2 py-1 rounded border border-white/20" data-tool="brush">🖌️ Brush</button>
-<button class="tool-btn text-xs px-2 py-1 rounded border border-white/20" data-tool="marker">✏️ Marker</button>
-<button class="tool-btn text-xs px-2 py-1 rounded border border-white/20" data-tool="eraser">🧹 Eraser</button>
+<button class="tool-btn text-xs px-2 py-1 rounded bg-[#38bdf8]/20 border border-[#38bdf8]" data-tool="pen"> Pen</button>
+<button class="tool-btn text-xs px-2 py-1 rounded border border-white/20" data-tool="brush"> Brush</button>
+<button class="tool-btn text-xs px-2 py-1 rounded border border-white/20" data-tool="marker"> Marker</button>
+<button class="tool-btn text-xs px-2 py-1 rounded border border-white/20" data-tool="eraser"> Eraser</button>
 </div>
 <div class="flex flex-wrap gap-2 items-center">
 <span class="text-xs opacity-60">Size:</span>
@@ -221,18 +211,15 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overscroll-behavi
 <div id="snake-menu" class="flex flex-col items-center justify-center gap-4 h-64 bg-white/5 rounded-xl border border-white/10">
 <h3 class="text-lg font-bold">Snake Battle Arena</h3>
 <div class="flex gap-3">
-<button id="snake-single-btn" class="px-4 py-2 bg-[#38bdf8] text-black rounded-full font-bold hover:bg-[#0ea5e9]">Solo Practice</button>
-<button id="snake-online-btn" class="px-4 py-2 border border-white/30 rounded-full hover:bg-white/10">Online (Multiplayer)</button>
+<button id="snake-single-btn" class="px-4 py-2 bg-[#38bdf8] text-black rounded-full font-bold hover:bg-[#0ea5e9]">Play vs Bots</button>
+<button id="snake-online-btn" class="px-4 py-2 border border-white/30 rounded-full hover:bg-white/10">Online Mode</button>
 </div>
 </div>
 <div id="snake-servers" class="hidden flex-col gap-3 h-64 bg-white/5 rounded-xl border border-white/10 p-4">
 <h3 class="text-sm font-bold border-b border-white/10 pb-2">Select Server</h3>
 <div class="flex flex-col gap-2 overflow-y-auto">
 <button class="server-item text-left px-3 py-2 bg-white/5 hover:bg-white/10 rounded flex justify-between" data-server="NA-East-1">
-<span>Server: NA-East-1</span> <span class="text-[#22c55e]">9/10 Players</span>
-</button>
-<button class="server-item text-left px-3 py-2 bg-white/5 hover:bg-white/10 rounded flex justify-between" data-server="EU-West-1">
-<span>Server: EU-West-1</span> <span class="text-[#22c55e]">5/10 Players</span>
+<span>Server: NA-East-1</span> <span class="text-[#22c55e]">3/10 Players</span>
 </button>
 </div>
 <button id="back-to-menu" class="text-xs text-center mt-2 opacity-50">Back</button>
@@ -243,7 +230,7 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overscroll-behavi
 <span class="text-xs opacity-70" id="lobby-server-name"></span>
 </div>
 <div class="flex-1 overflow-y-auto" id="lobby-list"></div>
-<button id="lobby-start-btn" class="w-full py-2 bg-[#22c55e] text-black font-bold rounded-lg opacity-50 cursor-not-allowed">Waiting for players...</button>
+<button id="lobby-start-btn" class="w-full py-2 bg-[#22c55e] text-black font-bold rounded-lg opacity-50 cursor-not-allowed">Waiting for Leader...</button>
 </div>
 <div id="snake-play-area" class="hidden flex-col gap-2">
 <div class="flex justify-between">
@@ -259,36 +246,26 @@ html, body { width: 100%; height: 100%; margin: 0; padding: 0; overscroll-behavi
 </div>
 
 <script>
-// --- STORAGE & SYNC (Simulates Online) ---
-// This allows tabs to talk to each other to simulate "other people"
+// --- BASIC AUTH & SETUP ---
 let currentUser = sessionStorage.getItem('relaxUser');
 let isAdmin = false;
-let currentGroup = null;
-
-// Load data from LocalStorage (Persistent)
-function loadData(key) { return JSON.parse(localStorage.getItem(key)) || []; }
-function saveData(key, data) { localStorage.setItem(key, JSON.stringify(data)); }
-
-// Initial Load
-let allGroups = loadData('relax_groups');
-let allPosts = loadData('relax_posts');
-let allGallery = loadData('relax_gallery');
+let allGroups = []; // Store group objects here
 
 function showApp(name) {
 document.getElementById('current-username').textContent = "Hi, " + name;
 document.getElementById('auth-screen').classList.add('hidden');
 document.getElementById('main-app').classList.remove('hidden');
 
+// ADMIN CHECK FOR Ray_irl
 if(name === 'Ray_irl') {
 isAdmin = true;
 document.getElementById('current-username').innerHTML = "Hi, Ray_irl <span class='text-xs bg-red-500 px-1 rounded ml-1'>ADMIN</span>";
 }
-renderGroups();
-renderPosts();
-renderGallery();
 }
 
-if(currentUser) showApp(currentUser);
+if(currentUser) {
+showApp(currentUser);
+}
 
 document.getElementById('auth-form').addEventListener('submit', (e) => {
 e.preventDefault();
@@ -305,114 +282,25 @@ sessionStorage.removeItem('relaxUser');
 location.reload();
 });
 
-// --- REALTIME SYNC LISTENER ---
-window.addEventListener('storage', (e) => {
-if(e.key === 'relax_posts') { allPosts = JSON.parse(e.newValue); renderPosts(); }
-if(e.key === 'relax_groups') { allGroups = JSON.parse(e.newValue); renderGroups(); }
-if(e.key === 'relax_gallery') { allGallery = JSON.parse(e.newValue); renderGallery(); }
-// If we are in a group, reload its messages (simulated by using same key logic later if expanded)
-});
-
-// --- NAVIGATION ---
+// --- NAVIGATION HELPERS ---
 function showMainView() {
 document.getElementById('main-view').classList.remove('hidden');
 document.getElementById('group-view').classList.add('hidden');
-currentGroup = null;
 }
 function showGroupView(groupName) {
-currentGroup = groupName;
 document.getElementById('main-view').classList.add('hidden');
 document.getElementById('group-view').classList.remove('hidden');
 document.getElementById('group-view-title').textContent = groupName;
-// Close settings menu if open
-document.getElementById('group-settings-menu').classList.add('hidden');
 }
 
 document.getElementById('all-posts-btn').onclick = showMainView;
 document.getElementById('exit-group-btn').onclick = showMainView;
 
-// --- POSTS & FEED ---
-function renderPosts() {
-const list = document.getElementById('feed-list');
-list.innerHTML = '';
-if(allPosts.length === 0) {
-document.getElementById('feed-empty').classList.remove('hidden');
-} else {
-document.getElementById('feed-empty').classList.add('hidden');
-allPosts.forEach((post, index) => {
-const li = document.createElement('li');
-li.className = "p-2 rounded bg-white/5 border border-white/5 flex justify-between items-start";
-const contentDiv = document.createElement('div');
-contentDiv.innerHTML = `<span class="font-bold text-[#38bdf8]">${post.user}:</span> ${post.text}`;
-li.appendChild(contentDiv);
 
-if(isAdmin) {
-const delBtn = document.createElement('button');
-delBtn.innerText = "Delete";
-delBtn.className = "text-white bg-red-500 hover:bg-red-600 text-[10px] uppercase font-bold ml-2 px-2 py-0.5 rounded";
-delBtn.onclick = () => {
-allPosts.splice(index, 1);
-saveData('relax_posts', allPosts);
-renderPosts();
-};
-li.appendChild(delBtn);
-}
-list.prepend(li);
-});
-}
-}
-
-document.getElementById('post-form').addEventListener('submit', (e) => {
-e.preventDefault();
-const text = document.getElementById('post-text').value;
-if(!text) return;
-
-allPosts.push({ user: currentUser, text: text, time: Date.now() });
-saveData('relax_posts', allPosts);
-renderPosts();
-document.getElementById('post-text').value = '';
-});
-
-// --- GROUPS ---
+// --- FIX: GROUP CREATION & JOINING LOGIC ---
 const groupForm = document.getElementById('create-group-form');
 document.getElementById('create-group-btn').onclick = () => groupForm.classList.remove('hidden');
 document.getElementById('cancel-group-btn').onclick = () => groupForm.classList.add('hidden');
-
-function renderGroups() {
-const list = document.getElementById('groups-list');
-// Keep the "All Posts" button
-list.innerHTML = '';
-const allBtn = document.createElement('button');
-allBtn.type="button";
-allBtn.id="all-posts-btn";
-allBtn.className="focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/30 bg-white/20 hover:bg-white/25 transition";
-allBtn.textContent="📋 All Posts";
-allBtn.onclick = showMainView;
-list.appendChild(allBtn);
-
-allGroups.forEach(g => {
-const btn = document.createElement('button');
-btn.type = 'button';
-btn.className = "focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition";
-btn.textContent = "# " + g.name + (g.password ? " 🔒" : "");
-
-btn.onclick = () => {
-if(isAdmin) {
-showGroupView("# " + g.name);
-} else if (g.password) {
-let attempt = prompt("Enter password for " + g.name + ":");
-if(attempt === g.password) {
-showGroupView("# " + g.name);
-} else {
-alert("Wrong password!");
-}
-} else {
-showGroupView("# " + g.name);
-}
-};
-list.appendChild(btn);
-});
-}
 
 document.getElementById('group-form').addEventListener('submit', (e) => {
 e.preventDefault();
@@ -420,41 +308,76 @@ const gName = document.getElementById('group-name').value;
 const gPass = document.getElementById('group-password').value;
 
 if(gName) {
-allGroups.push({ name: gName, password: gPass });
-saveData('relax_groups', allGroups);
-renderGroups();
+// Save group data so we can check password later
+const newGroup = { name: gName, password: gPass };
+allGroups.push(newGroup);
+
+// Create Button
+const btn = document.createElement('button');
+btn.type = 'button';
+btn.className = "focus-outline text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 hover:bg-white/15 transition";
+btn.textContent = "# " + gName + (gPass ? " " : "");
+
+// JOIN LOGIC
+btn.onclick = () => {
+if(isAdmin) {
+// Ray_irl bypasses everything
+showGroupView("# " + gName);
+} else if (newGroup.password) {
+// Normal user + password exists
+let attempt = prompt("Enter password for " + gName + ":");
+if(attempt === newGroup.password) {
+showGroupView("# " + gName);
+} else {
+alert("Wrong password!");
+}
+} else {
+// No password
+showGroupView("# " + gName);
+}
+};
+
+document.getElementById('groups-list').appendChild(btn);
+
+// Clean up
 document.getElementById('group-name').value = '';
 document.getElementById('group-password').value = '';
 groupForm.classList.add('hidden');
 }
 });
 
-// --- GROUP SETTINGS ---
-const settingsBtn = document.getElementById('group-settings-btn');
-const settingsMenu = document.getElementById('group-settings-menu');
-const deleteGroupBtn = document.getElementById('delete-group-btn');
+// --- FIX: POST MESSAGE & ADMIN DELETE (Ray_irl) ---
+document.getElementById('post-form').addEventListener('submit', (e) => {
+e.preventDefault();
+const text = document.getElementById('post-text').value;
+if(!text) return;
 
-settingsBtn.onclick = () => {
-settingsMenu.classList.toggle('hidden');
-};
-document.getElementById('close-settings-btn').onclick = () => settingsMenu.classList.add('hidden');
+const list = document.getElementById('feed-list');
+const empty = document.getElementById('feed-empty');
+if(empty) empty.classList.add('hidden');
 
-deleteGroupBtn.onclick = () => {
-if(!isAdmin) {
-alert("Only Admin can delete groups right now.");
-return;
+const li = document.createElement('li');
+li.className = "p-2 rounded bg-white/5 border border-white/5 flex justify-between items-start";
+
+// Post content
+const contentDiv = document.createElement('div');
+contentDiv.innerHTML = `<span class="font-bold text-[#38bdf8]">${currentUser}:</span> ${text}`;
+li.appendChild(contentDiv);
+
+// Admin Delete Button (Only for Ray_irl)
+if(isAdmin) {
+const delBtn = document.createElement('button');
+delBtn.innerText = "Delete";
+delBtn.className = "text-white bg-red-500 hover:bg-red-600 text-[10px] uppercase font-bold ml-2 px-2 py-0.5 rounded";
+delBtn.onclick = () => li.remove();
+li.appendChild(delBtn);
 }
-if(confirm("Delete this group permanently?")) {
-// Remove current group from array
-const cleanName = currentGroup.replace("# ", "");
-allGroups = allGroups.filter(g => g.name !== cleanName);
-saveData('relax_groups', allGroups);
-renderGroups();
-showMainView();
-}
-};
 
-// --- GROUP CHAT (Mock for now, but resets per group) ---
+list.prepend(li);
+document.getElementById('post-text').value = '';
+});
+
+// Group Chat Messages (Mock)
 document.getElementById('group-message-form').addEventListener('submit', (e) => {
 e.preventDefault();
 const txt = document.getElementById('group-message-text').value;
@@ -468,27 +391,6 @@ document.getElementById('group-message-text').value = '';
 list.scrollTop = list.scrollHeight;
 }
 });
-
-// --- GALLERY ---
-function renderGallery() {
-const cont = document.getElementById('gallery-container');
-cont.innerHTML = '';
-if(allGallery.length === 0) {
-cont.innerHTML = '<p class="text-xs opacity-50 col-span-full">Post your drawings in the game to see them here!</p>';
-return;
-}
-allGallery.forEach(imgData => {
-const wrapper = document.createElement('div');
-wrapper.className = "aspect-video bg-black rounded border border-white/10 overflow-hidden relative group";
-
-const img = document.createElement('img');
-img.src = imgData;
-img.className = "w-full h-full object-cover";
-
-wrapper.appendChild(img);
-cont.prepend(wrapper);
-});
-}
 
 // --- MODE SELECTOR ---
 function applyMode(mode) {
@@ -526,7 +428,55 @@ if(g === 'snake') resetSnakeUI();
 });
 });
 
-// --- DRAWING & GALLERY SAVING ---
+// --- 1. BREATHING ---
+let bState = false, bInt;
+document.getElementById('breathing-toggle').addEventListener('click', function() {
+bState = !bState;
+const c = document.getElementById('breathing-circle');
+const l = document.getElementById('breathing-label');
+if(bState) {
+this.textContent = "Stop";
+let inhale = true;
+c.style.transform = "scale(1.2)";
+bInt = setInterval(() => {
+inhale = !inhale;
+l.textContent = inhale ? "Inhale..." : "Exhale...";
+c.style.transform = inhale ? "scale(1.2)" : "scale(1)";
+}, 4000);
+} else {
+this.textContent = "Start";
+clearInterval(bInt);
+c.style.transform = "scale(1)";
+l.textContent = "Press Start";
+}
+});
+
+// --- 2. RIPPLE ---
+const rCanvas = document.getElementById('ripple-canvas');
+function createRipple(x, y) {
+const r = document.createElement('div');
+r.className = "absolute rounded-full border-2 border-[#38bdf8]";
+r.style.left = (x - 50) + 'px'; // Center it
+r.style.top = (y - 50) + 'px';
+r.style.width = '100px';
+r.style.height = '100px';
+r.style.animation = "rippleExpand 2s ease-out forwards";
+rCanvas.appendChild(r);
+setTimeout(() => r.remove(), 2000);
+}
+rCanvas.addEventListener('mousemove', (e) => {
+const rect = rCanvas.getBoundingClientRect();
+createRipple(e.clientX - rect.left, e.clientY - rect.top);
+});
+rCanvas.addEventListener('touchmove', (e) => {
+e.preventDefault();
+const rect = rCanvas.getBoundingClientRect();
+if(e.touches.length > 0) {
+createRipple(e.touches[0].clientX - rect.left, e.touches[0].clientY - rect.top);
+}
+}, {passive: false});
+
+// --- 3. DRAWING ---
 const dCvs = document.getElementById('drawing-canvas');
 const dCtx = dCvs.getContext('2d');
 let dPainting = false;
@@ -534,7 +484,9 @@ let dColor = '#38bdf8';
 let dTool = 'pen';
 let dSize = 5;
 
-function resizeDrawingCanvas() {}
+function resizeDrawingCanvas() {
+// Placeholder for resizing logic if needed
+}
 function getDrawPos(e) {
 const rect = dCvs.getBoundingClientRect();
 const clientX = e.touches ? e.touches[0].clientX : e.clientX;
@@ -558,7 +510,12 @@ dCtx.globalCompositeOperation = 'destination-out';
 dCtx.globalCompositeOperation = 'source-over';
 dCtx.strokeStyle = dColor;
 dCtx.globalAlpha = (dTool === 'marker') ? 0.4 : 1.0;
-if(dTool === 'brush') { dCtx.shadowBlur = 5; dCtx.shadowColor = dColor; } else { dCtx.shadowBlur = 0; }
+if(dTool === 'brush') {
+dCtx.shadowBlur = 5;
+dCtx.shadowColor = dColor;
+} else {
+dCtx.shadowBlur = 0;
+}
 }
 dCtx.lineTo(pos.x, pos.y);
 dCtx.stroke();
@@ -575,15 +532,7 @@ dCvs.addEventListener('touchmove', (e) => { e.preventDefault(); draw(e); }, {pas
 
 document.getElementById('clear-canvas').addEventListener('click', () => dCtx.clearRect(0,0,800,400));
 
-// SAVE DRAWING
-document.getElementById('post-drawing-btn').addEventListener('click', () => {
-const data = dCvs.toDataURL('image/png');
-allGallery.push(data);
-saveData('relax_gallery', allGallery);
-renderGallery();
-alert("Drawing posted to Gallery!");
-});
-
+// Tools logic
 document.querySelectorAll('.tool-btn').forEach(b => b.addEventListener('click', () => {
 dTool = b.dataset.tool;
 document.querySelectorAll('.tool-btn').forEach(t => t.classList.remove('bg-[#38bdf8]/20', 'border-[#38bdf8]'));
@@ -601,7 +550,151 @@ document.querySelectorAll('.color-btn').forEach(c => c.style.borderColor = 'rgba
 b.style.borderColor = 'white';
 }));
 
-// --- SNAKE ONLINE FIX ---
+// --- 4. POPCORN ---
+function initPopcorn() {
+const cvs = document.getElementById('popcorn-canvas');
+const ctx = cvs.getContext('2d');
+let py = 350, pvy = 0, gravity = 0.6;
+let obstacles = [];
+let score = 0;
+let active = true;
+
+cvs.onmousedown = jump;
+cvs.ontouchstart = (e) => { e.preventDefault(); jump(); };
+function jump() { if(py >= 340) pvy = -12; }
+
+function loop() {
+if(!active) return;
+ctx.clearRect(0,0,600,400);
+py += pvy;
+pvy += gravity;
+if(py > 350) { py = 350; pvy = 0; }
+ctx.fillStyle = "#eab308";
+ctx.fillRect(50, py, 30, 30);
+
+if(Math.random() < 0.015) obstacles.push({x:600, y:360});
+obstacles.forEach((o, i) => {
+o.x -= 4;
+ctx.fillStyle = "#f43f5e";
+ctx.fillRect(o.x, o.y, 20, 20);
+if(o.x < -20) { obstacles.splice(i,1); score++; document.getElementById('popcorn-score').innerText = score; }
+if(o.x < 80 && o.x > 20 && py > 330) {
+active = false;
+ctx.fillStyle = "white";
+ctx.font = "30px sans-serif";
+ctx.fillText("Game Over", 230, 200);
+}
+});
+requestAnimationFrame(loop);
+}
+document.getElementById('popcorn-reset').onclick = () => {
+obstacles=[]; score=0; active=true; py=350; pvy=0; loop();
+};
+loop();
+}
+
+// --- 5. BLOCK BLAST ---
+const bbGridSize = 8;
+let bbGrid = Array(64).fill(null);
+let bbScore = 0;
+let bbSelectedShapeIdx = -1;
+let bbCurrentShapes = [];
+const shapes = [
+[[0,0]], [[0,0], [0,1]], [[0,0], [1,0]], [[0,0], [0,1], [0,2]],
+[[0,0], [1,0], [2,0]], [[0,0], [0,1], [1,0], [1,1]], [[0,0], [1,0], [2,0], [2,1]]
+];
+function initBlockBlast() {
+bbGrid = Array(64).fill(null);
+bbScore = 0;
+renderBBGrid();
+generateBBShapes();
+}
+function renderBBGrid() {
+const container = document.getElementById('bb-grid');
+container.innerHTML = '';
+bbGrid.forEach((cell, i) => {
+const div = document.createElement('div');
+div.className = `w-full h-full rounded cursor-pointer border border-white/5 ${cell ? 'bg-[#38bdf8]' : 'bg-white/10'}`;
+div.onclick = () => placeShape(i);
+container.appendChild(div);
+});
+}
+function generateBBShapes() {
+bbCurrentShapes = [];
+const container = document.getElementById('bb-shapes');
+container.innerHTML = '';
+bbSelectedShapeIdx = -1;
+for(let i=0; i<3; i++) {
+const shapeDef = shapes[Math.floor(Math.random() * shapes.length)];
+bbCurrentShapes.push(shapeDef);
+const btn = document.createElement('div');
+btn.className = "bb-shape-btn w-16 h-16 bg-white/5 rounded-lg flex items-center justify-center cursor-pointer";
+btn.onclick = () => selectShape(i, btn);
+const miniGrid = document.createElement('div');
+miniGrid.style.display = 'grid';
+const w = Math.max(...shapeDef.map(p => p[1])) + 1;
+const h = Math.max(...shapeDef.map(p => p[0])) + 1;
+miniGrid.style.gridTemplateColumns = `repeat(${w}, 10px)`;
+miniGrid.style.gap = '2px';
+for(let r=0; r<h; r++) {
+for(let c=0; c<w; c++) {
+const cell = document.createElement('div');
+const isPart = shapeDef.some(p => p[0]===r && p[1]===c);
+cell.style.width = '10px'; cell.style.height = '10px';
+cell.style.backgroundColor = isPart ? '#38bdf8' : 'transparent';
+if(isPart) cell.style.borderRadius = '2px';
+miniGrid.appendChild(cell);
+}
+}
+btn.appendChild(miniGrid);
+container.appendChild(btn);
+}
+}
+function selectShape(idx, el) {
+if(bbCurrentShapes[idx] === null) return;
+bbSelectedShapeIdx = idx;
+document.querySelectorAll('.bb-shape-btn').forEach(b => b.classList.remove('selected'));
+el.classList.add('selected');
+}
+function placeShape(gridIdx) {
+if(bbSelectedShapeIdx === -1) return;
+const shape = bbCurrentShapes[bbSelectedShapeIdx];
+if(!shape) return;
+const startR = Math.floor(gridIdx / bbGridSize);
+const startC = gridIdx % bbGridSize;
+let fits = true;
+for(let p of shape) {
+const r = startR + p[0];
+const c = startC + p[1];
+if(r >= bbGridSize || c >= bbGridSize || bbGrid[r*bbGridSize + c] !== null) { fits = false; break; }
+}
+if(fits) {
+for(let p of shape) { bbGrid[(startR + p[0])*bbGridSize + (startC + p[1])] = '#38bdf8'; }
+bbCurrentShapes[bbSelectedShapeIdx] = null;
+bbSelectedShapeIdx = -1;
+checkLines();
+renderBBGrid();
+generateBBShapes();
+if(bbCurrentShapes.every(s => s === null)) generateBBShapes();
+}
+}
+function checkLines() {
+let lines = 0;
+for(let r=0; r<bbGridSize; r++) {
+let full = true;
+for(let c=0; c<bbGridSize; c++) if(!bbGrid[r*bbGridSize+c]) full=false;
+if(full) { for(let c=0; c<bbGridSize; c++) bbGrid[r*bbGridSize+c]=null; lines++; }
+}
+for(let c=0; c<bbGridSize; c++) {
+let full = true;
+for(let r=0; r<bbGridSize; r++) if(!bbGrid[r*bbGridSize+c]) full=false;
+if(full) { for(let r=0; r<bbGridSize; r++) bbGrid[r*bbGridSize+c]=null; lines++; }
+}
+if(lines>0) { bbScore+=lines*100; document.getElementById('bb-score').innerText=bbScore; }
+}
+document.getElementById('bb-reset').addEventListener('click', initBlockBlast);
+
+// --- 6. SNAKE BATTLE ---
 const sMenu = document.getElementById('snake-menu');
 const sServers = document.getElementById('snake-servers');
 const sLobby = document.getElementById('snake-lobby');
@@ -642,31 +735,30 @@ startLobbySim();
 
 function startLobbySim() {
 const list = document.getElementById('lobby-list');
-list.innerHTML = `<div class="p-2 border-b border-white/5 text-[#38bdf8] font-bold">You (Ready)</div>`;
+list.innerHTML = `<div class="p-2 border-b border-white/5 text-[#38bdf8]">You (Joined)</div>`;
 const btn = document.getElementById('lobby-start-btn');
-btn.innerText = "Finding Match...";
+btn.innerText = "Waiting for Host...";
 btn.className = "w-full py-2 bg-[#22c55e] text-black font-bold rounded-lg opacity-50 cursor-not-allowed transition";
 
-const bots = ["Shadow_Hunter", "Viper_Queen", "Slayer_99", "NoobMaster", "Pro_Gamer_1"];
+const bots = ["Bot_Alpha", "Slayer_99", "Pro_Snake"];
 let count = 0;
 
 const joinInt = setInterval(() => {
-if(count >= 3) { // Wait for 3 bots
+if(count >= bots.length) {
 clearInterval(joinInt);
-btn.innerText = "Starting Game...";
-btn.style.opacity = "1";
+btn.innerText = "Host Starting Game...";
 setTimeout(() => {
 sLobby.classList.add('hidden');
-startGame(true); // START ONLINE GAME
-}, 1000);
+startGame(true);
+}, 1500);
 return;
 }
 const div = document.createElement('div');
-div.className = "p-2 border-b border-white/5 opacity-80";
-div.innerText = bots[count] + " (Ready)";
+div.className = "p-2 border-b border-white/5";
+div.innerText = bots[count];
 list.appendChild(div);
 count++;
-}, 800);
+}, 1000);
 }
 
 function startGame(online) {
@@ -675,27 +767,23 @@ sPlay.classList.remove('hidden');
 sPlay.classList.add('flex');
 
 snakes = [];
-// Player
 snakes.push({
 id: 'player', color: '#38bdf8', body: [{x:10, y:10}, {x:9, y:10}, {x:8, y:10}],
-dx: 1, dy: 0, dead: false, name: "You"
+dx: 1, dy: 0, dead: false
 });
 
-// Bots
-const botColors = ['#ef4444', '#22c55e', '#a855f7', '#eab308'];
-const starts = [{x:25,y:5}, {x:5,y:15}, {x:25,y:15}, {x:15, y:5}];
+const botColors = ['#ef4444', '#22c55e', '#a855f7'];
+const starts = [{x:25,y:5}, {x:5,y:15}, {x:25,y:15}];
 
-let botCount = online ? 4 : 2; // More bots if online
-
-for(let i=0; i<botCount; i++) {
+for(let i=0; i<3; i++) {
 snakes.push({
-id: 'bot'+i, color: botColors[i%4],
+id: 'bot'+i, color: botColors[i],
 body: [{x:starts[i].x, y:starts[i].y}, {x:starts[i].x, y:starts[i].y+1}],
 dx: 0, dy: -1, dead: false, isBot: true
 });
 }
 
-document.getElementById('snake-status-text').innerText = online ? "Online Match - Survive!" : "Practice Mode";
+document.getElementById('snake-status-text').innerText = "Playing...";
 document.getElementById('snake-status-text').style.color = "#38bdf8";
 
 clearInterval(snakeInterval);
@@ -718,15 +806,14 @@ sCtx.fillRect(0,0,600,400);
 snakes.forEach(s => {
 if(s.dead) return;
 
-// Simple Bot AI
 if(s.isBot) {
-if(Math.random() < 0.15) { // Change direction randomly
+if(Math.random() < 0.1) {
 const moves = [{dx:0,dy:-1},{dx:0,dy:1},{dx:-1,dy:0},{dx:1,dy:0}];
 const safeMoves = moves.filter(m => {
-if(m.dx === -s.dx && m.dy === -s.dy) return false; // Don't reverse
+if(m.dx === -s.dx && m.dy === -s.dy) return false;
 const nx = s.body[0].x + m.dx;
 const ny = s.body[0].y + m.dy;
-return (nx >=0 && nx < 30 && ny >= 0 && ny < 20); // Stay in bounds
+return (nx >=0 && nx < 30 && ny >= 0 && ny < 20);
 });
 if(safeMoves.length > 0) {
 const move = safeMoves[Math.floor(Math.random()*safeMoves.length)];
@@ -737,13 +824,11 @@ s.dx = move.dx; s.dy = move.dy;
 
 const head = {x: s.body[0].x + s.dx, y: s.body[0].y + s.dy};
 
-// Wall Collision
 if(head.x < 0 || head.x >= 30 || head.y < 0 || head.y >= 20) {
 s.dead = true;
 return;
 }
 
-// Snake Collision
 snakes.forEach(other => {
 if(other.dead) return;
 other.body.forEach(seg => {
@@ -757,15 +842,12 @@ s.body.unshift(head);
 if(s.body.length > 5 && Math.random() > 0.05) s.body.pop();
 });
 
-// Draw Snakes
 snakes.forEach(s => {
 if(s.dead) return;
 sCtx.fillStyle = s.color;
 s.body.forEach(b => sCtx.fillRect(b.x*20, b.y*20, 18, 18));
-// Eyes
 sCtx.fillStyle = "white";
 sCtx.fillRect(s.body[0].x*20+4, s.body[0].y*20+4, 4, 4);
-sCtx.fillRect(s.body[0].x*20+12, s.body[0].y*20+4, 4, 4);
 });
 
 if(snakes[0].dead) {
@@ -773,60 +855,7 @@ document.getElementById('snake-status-text').innerText = "Eliminated!";
 document.getElementById('snake-status-text').style.color = "red";
 }
 }
-
-// --- GAMES INIT (BREATHING/ETC) ---
-// (Existing game code kept but omitted for brevity as they weren't changed)
-// Breathing
-let bState = false, bInt;
-document.getElementById('breathing-toggle').addEventListener('click', function() {
-bState = !bState;
-const c = document.getElementById('breathing-circle');
-const l = document.getElementById('breathing-label');
-if(bState) {
-this.textContent = "Stop";
-let inhale = true;
-c.style.transform = "scale(1.2)";
-bInt = setInterval(() => {
-inhale = !inhale;
-l.textContent = inhale ? "Inhale..." : "Exhale...";
-c.style.transform = inhale ? "scale(1.2)" : "scale(1)";
-}, 4000);
-} else {
-this.textContent = "Start";
-clearInterval(bInt);
-c.style.transform = "scale(1)";
-l.textContent = "Press Start";
-}
-});
-// Ripple
-const rCanvas = document.getElementById('ripple-canvas');
-function createRipple(x, y) {
-const r = document.createElement('div');
-r.className = "absolute rounded-full border-2 border-[#38bdf8]";
-r.style.left = (x - 50) + 'px'; r.style.top = (y - 50) + 'px';
-r.style.width = '100px'; r.style.height = '100px';
-r.style.animation = "rippleExpand 2s ease-out forwards";
-rCanvas.appendChild(r);
-setTimeout(() => r.remove(), 2000);
-}
-rCanvas.addEventListener('mousemove', (e) => {
-const rect = rCanvas.getBoundingClientRect();
-createRipple(e.clientX - rect.left, e.clientY - rect.top);
-});
-// Block Blast & Popcorn logic remains same (omitted to save space, but buttons work)
-function initBlockBlast() {
-const bbGrid = document.getElementById('bb-grid'); bbGrid.innerHTML = '';
-for(let i=0;i<64;i++) {
-let d = document.createElement('div'); d.className="bg-white/10 rounded"; bbGrid.appendChild(d);
-}
-document.getElementById('bb-shapes').innerHTML = "<div class='text-xs opacity-50'>Click shapes to play</div>";
-}
-function initPopcorn() {
-// Basic loop starter
-const cvs = document.getElementById('popcorn-canvas');
-const ctx = cvs.getContext('2d');
-ctx.fillStyle = "#eab308"; ctx.fillRect(50, 350, 30, 30);
-}
 </script>
 </body>
 </html>
+
